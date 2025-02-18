@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VELORETTI</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet">
+    </head>
+    <body class="bg-gray-100">
+
+        <!-- Navigation Bar -->
+        <nav class="bg-white fixed w-full top-0 z-50 shadow-md h-16 mb-10">
+            <div
+                class="max-w-screen-xl mx-auto flex items-center justify-between p-0">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-semibold">VELORETTI</a>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8 font-medium">
+                    <li class="relative group">
+                        <a href="#"
+                            class="hover:text-gray-600 flex items-center">
+                            ELECTRIC
+                            <span>
+                                <img src="./images/Submenu-Icon.png" alt="down"
+                                    class="ml-1">
+                            </span>
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md group-hover:block space-y-4">
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Model
+                                    A</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Model
+                                    B</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <a href="#"
+                            class="hover:text-gray-600 flex items-center">CITY
+                            <span>
+                                <img src="./images/Submenu-Icon.png" alt="down"
+                                    class="ml-1">
+                            </span>
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">City
+                                    Bike A</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">City
+                                    Bike B</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="hover:text-gray-600 flex items-center">Kids
+                            <span>
+                                <img src="./images/Submenu-Icon.png" alt="down"
+                                    class="ml-1">
+                            </span>
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Kids
+                                    Bike A</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Kids
+                                    Bike B</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#"
+                            class="hover:text-gray-600">ACCESSORIES</a></li>
+                    <li><a href="#" class="hover:text-gray-600">STORES</a></li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="hover:text-gray-600 flex items-center">LEASING
+                            <span>
+                                <img src="./images/Submenu-Icon.png" alt="down"
+                                    class="ml-1">
+                            </span>
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Leasing
+                                    A</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Leasing
+                                    B</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Right Menu -->
+                <div class="flex items-center justify-between space-x-4 p-4">
+                    <!-- Language Selector -->
+                    <div class="flex items-center space-x-2">
+                        <label for="countries" class="text-sm">EN</label>
+                        <img src="./images/United_Kingdom.svg"
+                            alt="United Kingdom Flag" class="w-5 h5">
+                    </div>
+
+                    <!-- User Icon (optional) -->
+                    <div class="flex items-center space-x-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-toggle" class="md:hidden p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden bg-white p-4">
+                    <a href="#" class="block py-2">ELECTRIC</a>
+                    <a href="#" class="block py-2">CITY</a>
+                    <a href="#" class="block py-2">KIDS</a>
+                    <a href="#" class="block py-2">ACCESSORIES</a>
+                    <a href="#" class="block py-2">STORES</a>
+                    <a href="#" class="block py-2">LEASING</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section 1-->
+        <section
+            class="relative w-full max-w-[1540px]  h-[828px] mt-24 mx-auto">
+            <div
+                class="absolute inset-0 w-full h-full bg-[url(./images/imgHomepage.png)] bg-cover bg-center bg-no-repeat"></div>
+
+            <div
+                class="relative z-10 flex flex-col items-start justify-center w-full h-full text-white px-6 md:px-12">
+                <h2 class="text-lg md:text-xl font-semibold">VELORETTI
+                    BUSINESS</h2>
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                    Bike Lease Plan For Employees.
+                </h1>
+            </div>
+        </section>
+
+        <!-- Content Section 2-->
+        <section
+            class="flex justify-center items-center w-full max-w-[1440px] h-[825px] mt-24 mx-auto">
+            <!-- <div class="w-1/5  bg-[url(./images/Text-media-static_background.png)] bg-cover bg-no-repeat p-40"></div> -->
+            <div class="w-[635px] p-10">
+                <img src="./images/Text-media-static_background.png"
+                    alt="section4">
+            </div>
+            <div
+                class="w-1/2 h-[825px] flex flex-col justify-center p-10 text-black text-left px-6 md:px-12">
+                <h1
+                    class="text-3xl md:text-4xl font-semibold leading-relaxed mb-4">
+                    Bike plans for employees.
+                </h1>
+                <p
+                    class="text-lg md:text-xl leading-relaxed text-gray-700 max-w-prose">
+                    Veloretti Electrics benefit both the environment and the
+                    health of your employees.
+                    Oh, and they look good too. Cost-free for the employer
+                    and outside of the WKR.
+                </p>
+                <p class="mt-6">
+                    <a href="#"
+                        class="font-semibold hover:underline">Discover
+                        More</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Content Section 3-->
+        <section
+            class="relative w-full max-w-[1540px] h-[828px] mt-24 mx-auto">
+            <div
+                class="absolute inset-0 w-full h-full bg-[url(./images/Text-media-new_background.png)] bg-cover bg-center bg-no-repeat"></div>
+            <div
+                class="absolute inset-0 flex flex-col items-start justify-center text-white text-left px-6 md:px-12 py-12">
+                <h1
+                    class="text-3xl md:text-4xl font-semibold leading-relaxed mb-4">
+                    Service, maintenance and insurance
+                </h1>
+                <p
+                    class="text-lg md:text-xl leading-relaxed break-words max-w-prose">
+                    The lease includes an all-in service package. Throughout
+                    the entire 36 months, you are fully insured against
+                    damage, theft, and maintenance. In addition, you always
+                    have access to roadside assistance.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Content Section 4-->
+        <section class="flex justify-center w-full h-[825px] mt-24 ">
+            <div class="w-[635px] p-10">
+                <img src="./images/imageSection4.png"
+                    alt="section4">
+            </div>
+            <div
+                class="w-[635px] p-10  text-black text-left px-6 md:px-12 py-12">
+                <h1
+                    class="text-3xl md:text-4xl font-semibold leading-relaxed mb-4">Free
+                    of Charge for employers</h1>
+                <p
+                    class="text-lg md:text-xl leading-relaxed break-words max-w-prose">
+                    The bike plan is totally independent of the WKR and is
+                    free for you as an employer. The employee pays the lease
+                    costs and you, as the employer, decide whether you want
+                    to contribute to the costs.
+                </p>
+                <p><a href="#" class="text-blue-500">Cost Example</a></p>
+            </div>
+        </section>
+
+        <!-- Content Section 5-->
+        <section class="flex justify-center w-full h-[825px] mt-24 gap-5 ">
+
+            <div
+                class="w-[635px] p-10 grid justify-items-center text-black text-left px-6 md:px-12 py-12">
+
+                <div class="flex flex-col space-y-5 justify-center">
+                    <h1
+                        class="text-3xl md:text-4xl font-semibold leading-relaxed mb-4 ">
+                        How it works
+                    </h1>
+                    <div class="flex items-start space-x-3">
+                        <span
+                            class="rounded-full bg-gray-300 w-5 p-4 flex items-center justify-center"></span>
+                        <div>
+                            <span class="text-lg font-semibold">Register
+                                your company</span>
+                            <p class="mt-1 text-gray-600">
+                                Fill in our registration form with your
+                                company details. After your
+                                registration, our leasing partner will do a
+                                credit check. You will hear
+                                whether your application has been approved
+                                within 24 hours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <span
+                            class="rounded-full bg-gray-300 w-5 p-4 flex items-center justify-center"></span>
+                        <div>
+                            <span class="text-lg font-semibold">Determine
+                                the requirements</span>
+                            <p class="mt-1 text-gray-600">
+                                You get access to a digital platform. Set
+                                the requirements for your employees
+                                and share the registration link.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <span
+                            class="rounded-full bg-gray-300 w-5 p-4 flex items-center justify-center"></span>
+                        <div>
+                            <span class="text-lg font-semibold">Ride your
+                                bike!</span>
+                            <p class="mt-1 text-gray-600">
+                                Let's go! Your employees can choose their
+                                bikes and they'll be delivered straight to
+                                their homes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <span
+                            class="rounded-full bg-gray-300 w-5 p-4 flex items-center justify-center"></span>
+                        <div>
+                            <span
+                                class="text-lg font-semibold">Administration</span>
+                            <p class="mt-1 text-gray-600">
+                                Everthing in one place. The digital platform
+                                gives you an easy overview of all the
+                                information for your payroll.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="w-[635px] p-5">
+                <img src="./images/imageSection5.png"
+                    alt="section5">
+            </div>
+        </section>
+
+        <!-- Content Section 6 -->
+        <div
+            class="flex justify-center w-full h-[625px] gap-10 mt-24 pr-[42.35px] pl-[42.34px]">
+            <!-- Product Image Section -->
+            <div class="w-[635px] p-10 flex flex-col  bg-gray-200">
+                <div class="flex items-center">
+                    <h2 class="text-xl font-semibold mr-2">Electric Ace</h2>
+                    <span class="text-sm text-gray-600">Two</span>
+                    <p class="text-xl font-semibold ml-auto">€69,07
+                        NET/MONTH</p>
+                </div>
+
+                <a href="#">
+                    <img class="rounded-t-lg w-full p-10 object-contain"
+                        src="./images/bike.png" alt="Bike Image" />
+                </a>
+                <div class="p-5 flex justify-center space-x-5 mt-1">
+                    <div
+                        class="rounded-full border-2 border-gray-500 w-8 h-8 flex items-center justify-center">
+                        <p class="rounded-full bg-black p-2"></p>
+                    </div>
+
+                    <div
+                        class="rounded-full border-2 flex items-center justify-center">
+                        <p class="rounded-full bg-gray-500 p-3"></p>
+                    </div>
+
+                    <div
+                        class="rounded-full border-2 flex items-center justify-center">
+                        <p class="rounded-full bg-[#DDD9CD] p-3"></p>
+                    </div>
+                    <p
+                        class="relative w-[30px] h-[30px] bg-[#EFE1CB] rounded-full flex items-center justify-center">
+                        <span
+                            class="absolute w-[20px] h-[20px] bg-black rounded-full"></span>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Second Product Image Section -->
+            <div class="w-[635px] p-10 flex flex-col   bg-gray-200">
+                <div class="flex items-center">
+                    <h2 class="text-xl font-semibold mr-2">Electric Ace</h2>
+                    <span class="text-sm text-gray-600">Two</span>
+                    <p class="text-xl font-semibold ml-auto">€69,07
+                        NET/MONTH</p>
+                </div>
+                <a href="#">
+                    <img class="rounded-t-lg w-full h-auto object-contain"
+                        src="./images/bike.png" alt="Electric Bike Image" />
+                </a>
+                <div class="p-5 flex justify-center space-x-5 mt-1">
+                    <div
+                        class="rounded-full border-2 border-gray-500 w-8 h-8 flex items-center justify-center">
+                        <p class="rounded-full bg-black p-2"></p>
+                    </div>
+
+                    <div
+                        class="rounded-full border-2 flex items-center justify-center">
+                        <p class="rounded-full bg-gray-500 p-3"></p>
+                    </div>
+
+                    <div
+                        class="rounded-full border-2 flex items-center justify-center">
+                        <p class="rounded-full bg-[#DDD9CD] p-3"></p>
+                    </div>
+                    <p
+                        class="relative w-[30px] h-[30px] bg-[#EFE1CB] rounded-full flex items-center justify-center">
+                        <span
+                            class="absolute w-[20px] h-[20px] bg-black rounded-full"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Section 7 -->
+        <section class="flex flex-col items-center w-full h-auto mt-24">
+            <h1 class="text-5xl text-black mb-10">Get in touch</h1>
+            <div class="flex flex-col items-center w-full gap-6 ">
+                <input type="text" placeholder="First name"
+                    class="h-[57px] w-[60%] px-4 border border-gray-300 rounded-md">
+                <input type="text" placeholder="Last name"
+                    class="h-[57px] w-[60%] px-4 border border-gray-300 rounded-md">
+                <input type="email" placeholder="Email address"
+                    class="h-[57px] w-[60%] px-4 border border-gray-300 rounded-md">
+                <input type="text" placeholder="Phone number"
+                    class="h-[57px] w-[60%] px-4 border border-gray-300 rounded-md">
+                <input type="text" placeholder="Company name"
+                    class="h-[57px] w-[60%] px-4 border border-gray-300 rounded-md">
+                <select
+                    class="h-[57px] w-[60%] px-4 border border-gray-300 rounded-md">
+                    <option value disabled selected>Company Size</option>
+                    <option value="small">Small (1-10 employees)</option>
+                    <option value="medium">Medium (11-50 employees)</option>
+                    <option value="large">Large (51+ employees)</option>
+                </select>
+                <input type="text" placeholder="Number of bikes"
+                    class="h-[57px] w-[60%] px-4 border border-gray-300 rounded-md">
+                <textarea placeholder="How can we help"
+                    class="h-[309px] w-[60%] px-4 border border-gray-300 rounded-md"></textarea>
+            </div>
+        </section>
+
+        <!-- Content Section 8 -->
+        <section class="flex flex-col items-center w-full h-auto mt-24">
+            <h1 class="text-[120px] text-black mb-10">Any questions?</h1>
+            <div class="flex flex-col items-center w-full gap-6 ">
+                <div class="h-[57px] w-[60%] px-5   ">
+                    <h2 class="text-3xl">what about the paperwork?</h2>
+                    <p class="text-[#14161599]">The bicycle plan is set up so
+                        that there will be no administrative work on your part
+                        as the employer. You can use a free online platform
+                        that has been created by our leasing partner. This
+                        provides you with a simple overview of your business and
+                        your employees, allowing
+                        you to arrange everything. It also simplifies all the
+                        paperwork. Everything is organised with just a few
+                        clicks.</p>
+                        <hr class="border-1 border-[#14161599] mt-4">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="bg-gray-700 max-w-[1640px] mt-24 mx-auto">
+            <div
+                class="w-[90%] m-auto flex flex-col md:flex-row justify-between items-center">
+                <div
+                    class="w-[60%] text-[16px] text-justify text-white py-7 justify-center ml-20">
+                    <p>
+                        Ready to take the Electric Ivy or Ace for a spin?
+                        Electric test rides are now available in Amsterdam,
+                        Amstelveen, Abcoude, Bussum, Den Haag, Nijmegen,
+                        Weesp, Wormerveer, Berlin, Hamburg, and Munich.
+                        Schedule your test ride now, and we'll see you
+                        there.
+                    </p>
+                </div>
+
+                <button
+                    class="bg-white text-black w-full sm:w-[200px] h-[40px] sm:h-[50px] rounded-full text-[14px] font-semibold shadow-md hover:bg-gray-200 transition text-center mt-4 md:mt-0 mr-10">
+                    BOOK NOW
+                </button>
+            </div>
+        </div>
+        <footer
+            class="bg-gray-900 max-w-[1640px] mx-auto text-white relative">
+            <div class="mx-auto px-4 pb-6 pt-16 sm:px-6 lg:px-8">
+                <div
+                    class="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5">
+                    <div class="ml-10">
+                        <h2 class="text-2xl font-bold">Explorer</h2>
+                        <ul class="mt-4 space-y-2 text-gray-400">
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Electric
+                                    bikes</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">City
+                                    bikes</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Kids'
+                                    bikes</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Accessories</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Outlet</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Business</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Insurance
+                                    Electric</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Size
+                                    guide</a></li>
+                        </ul>
+                    </div>
+                    <div class="ml-10">
+                        <h2 class="text-2xl font-bold">About</h2>
+                        <ul class="mt-4 space-y-2 text-gray-400">
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">About
+                                    us</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Journal</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Reviews</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Press</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Jobs</a></li>
+                        </ul>
+                    </div>
+                    <div class="mr-10">
+                        <h2 class="text-2xl font-bold">Help</h2>
+                        <ul class="mt-4 space-y-2 text-gray-400">
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Contact</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">FAQ</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Delivery</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Assembly
+                                    & manuals</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Payment
+                                    options</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Privacy
+                                    policy</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Terms
+                                    & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 mr-20 ml-20 relative">
+                        <h2 class="text-white font-bold">Join the ride.</h2>
+                        <p class="text-gray-400 font-bold">Sign up for our
+                            newsletter.</p>
+                        <form class="mt-4">
+                            <label for="email" class="sr-only">Email</label>
+                            <div
+                                class="flex items-center rounded-[20px] overflow-hidden border border-gray-600 bg-gray-800">
+                                <input type="email" id="email"
+                                    placeholder="Enter your email address here"
+                                    class="w-full bg-gray-800 px-4 py-2 text-white focus:outline-none focus:ring-0" />
+                                <button type="submit"
+                                    class="bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-500 transition rounded-[20px]">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <div class="mt-2 flex items-center">
+                                <input type="checkbox" id="agree"
+                                    class="mr-2">
+                                <label for="agree"
+                                    class="text-gray-400 text-sm">By signing
+                                    up, I agree to the privacy policy of
+                                    Veloretti.</label>
+                            </div>
+                        </form>
+                        <div class="mt-4 flex items-center p-4">
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300 mr-4">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300 mr-4">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300 mr-4">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300 mr-4">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrow Up Button at Top-Right Corner -->
+            <div class="absolute top-4 right-4 z-10 mr-5">
+                <button
+                    class="rounded-full bg-white w-12 h-12 text-black text-center shadow-lg hover:bg-blue-500 transition">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+        </script>
+    </body>
+</html>
