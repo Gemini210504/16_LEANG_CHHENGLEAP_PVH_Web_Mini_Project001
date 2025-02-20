@@ -1,15 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cities</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cities</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="./styles/output.css">
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
             rel="stylesheet">
-</head>
-<body>
-    
-</body>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class=" fixed w-full top-0 z-50 h-16 mb-10 ">
+            <div
+                class="max-w-screen-xl mx-auto flex items-center justify-between p-0">
+                <!-- Logo -->
+                <a href="#"><img src="./images/logo.png" alt="logo" class="w-[130px] h-[20px]"></a>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8 font-Nuckle">
+                    <li class="relative group">
+                        <a href="#"
+                            class="hover:text-gray-600 flex items-center">
+                            ELECTRIC
+                            <span>
+                                <img src="./images/Submenu-Icon.png" alt="down"
+                                    class="ml-1">
+                            </span>
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md group-hover:block space-y-4">
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Model
+                                    A</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Model
+                                    B</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <a href="#"
+                            class="hover:text-gray-600 flex items-center">CITY
+                            <span>
+                                <img src="./images/Submenu-Icon.png" alt="down"
+                                    class="ml-1">
+                            </span>
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md group-hover:block ">
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">City
+                                    Bike A</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">City
+                                    Bike B</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="hover:text-gray-600 flex items-center">Kids
+                            <span>
+                                <img src="./images/Submenu-Icon.png" alt="down"
+                                    class="ml-1">
+                            </span>
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Kids
+                                    Bike A</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Kids
+                                    Bike B</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#"
+                            class="hover:text-gray-600">ACCESSORIES</a></li>
+                    <li><a href="#" class="hover:text-gray-600">STORES</a></li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="hover:text-gray-600 flex items-center">LEASING
+                            <span>
+                                <img src="./images/Submenu-Icon.png" alt="down"
+                                    class="ml-1">
+                            </span>
+                        </a>
+                        <ul
+                            class="absolute left-0 mt-2 hidden w-40 bg-white shadow-md group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Leasing
+                                    A</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-200">Leasing
+                                    B</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Right Menu -->
+                <div class="flex items-center justify-between space-x-4 p-4">
+                    <!-- Language Selector -->
+                    <div class="flex items-center space-x-0">
+                        <label for="countries" class="text-sm">EN</label>
+                        <img src="./images/uk.png"
+                            alt="United Kingdom Flag" class="w-4 h-5">
+                    </div>
+
+                    <!-- User Icon (optional) -->
+                    <div class="flex items-center space-x-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-toggle" class="md:hidden p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden bg-white p-4">
+                    <a href="#" class="block py-2">ELECTRIC</a>
+                    <a href="#" class="block py-2">CITY</a>
+                    <a href="#" class="block py-2">KIDS</a>
+                    <a href="#" class="block py-2">ACCESSORIES</a>
+                    <a href="#" class="block py-2">STORES</a>
+                    <a href="#" class="block py-2">LEASING</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section 1 -->
+        <section class="relative w-full max-w-[1540px] h-[828px] mx-auto">
+            <div
+                class="absolute inset-0 w-full h-full bg-[url(./images/cities1.png)] bg-cover bg-center bg-no-repeat"></div>
+
+            <div
+                class="relative z-10 flex flex-col items-start justify-center w-full h-full text-white px-6 md:px-12">
+                <h2 class="text-lg p-2 font-Nuckle">VELORETTI</h2>
+                <h1
+                    class="text-3xl p-4 sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                    City Bikes
+                </h1>
+                <h2 class="text-lg p-2 font-Nuckle">Forever Forward.</h2>
+            </div>
+        </section>
+
+        <!-- Content Section 2 -->
+        <section class="relative w-full max-w-[1540px] h-[1228px] mx-auto">
+            <div
+                class="w-[90%] mx-auto text-[120px] flex items-center justify-center mb-10">
+                Forever Forward.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 px-6 md:px-10 relative">
+
+                <div class="flex justify-center items-center">
+                    <img src="./images/cities2.png" alt="cities2"
+                        class="mx-6 my-6 w-[90%] sm:w-[295px] h-[auto] sm:h-[356px]">
+                </div>
+
+                <div class="relative flex justify-center items-start">
+                    <img src="./images/cities3.png" alt="cities3"
+                        class="w-[90%] sm:w-[540px] h-auto sm:h-[650px] mx-auto md:ml-10">
+                    <p
+                        class="bg-white shadow-2xl w-[80%] sm:w-[90%] md:w-[39%] p-6 sm:p-8 md:p-10 absolute sm:left-[-10%] sm:bottom-[-20%] md:left-[-10%] md:bottom-[-40%] z-10 text-center sm:text-left">
+                        Our women's bicycles are for everyone who likes to
+                        combine style with performance. In this range, available
+                        are the Café Racer and the Robyn, both frames with a
+                        lower tube, making it easy to step through.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Content Section 3 -->
+        <section
+            class=" w-full max-w-[1540px] h-[728px] mx-auto bg-[#B6B6B6] flex items-center">
+
+            <div class="flex snap-x gap-10 mx-6 sm:mx-20 ">
+            
+                <div class="snap-center flex-shrink-0 w-[80%] sm:w-[40%]">
+                    <img src="./images/productbike1.png"
+                        class="w-full sm:w-[550px] h-[auto]" />
+                    <div class="flex justify-between mt-2">
+                        <p class="text-[#FFFFFF]">Caféracer</p>
+                        <p class="#FFFFFF opacity-50">Women</p>
+                    </div>
+                </div>
+
+                <div class="snap-center flex-shrink-0 w-[80%] sm:w-[40%]">
+                    <img src="./images/productbike2.png"
+                        class="w-full sm:w-[550px] h-[auto]" />
+                    <div class="flex justify-between mt-2">
+                        <p class="text-[#FFFFFF]">Robyn</p>
+                        <p class="#FFFFFF opacity-50">Women</p>
+                    </div>
+                </div>
+
+               
+                <div
+                    class="snap-center flex-shrink-0 w-[100%] sm:w-[50%] overflow-hidden">
+                    <img src="./images/productbike3.png"
+                        class="w-full sm:w-[550px] h-[auto]" />
+                    <div class="flex justify-between mt-2">
+                        <p class="text-[#FFFFFF]">Caféracer</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Content Section 4 -->
+        <section
+            class="relative w-full max-w-[1540px] h-[1228px] mt-24 mx-auto ">
+            <div class="grid grid-cols-2 gap-10 relative ">
+                
+                <div
+                    class="relative flex flex-col w-full items-center justify-center">
+                    <img src="./images/cities4one.png" alt="cities4one"
+                        class="w-[590.39px] h-[698.8px] p-10">
+                    <img src="./images/cities4three.png" alt="cities4three"
+                        class="absolute w-[417.59px] right-[-20%] bottom-[-40%]">
+                </div>
+
+                
+                <div class="relative  flex flex-col w-full  top-[5.5%] ">
+                    <img src="./images/cities4two.png" alt="product4two"
+                        class="w-[273px] h-[330.28px] absolute right-[24.5%]">
+                    <p
+                        class="absolute left-[-21%] bg-white p-10 max-w-[60%] h-[482px] shadow-lg border-2 border-[#1416151A] flex items-center text-[25px] text-[#14161566] rounded-[10px]">
+                        Whether you like it easy or fast, we got both. Our men's
+                        range of bicycles
+                        combine modern clean design with great quality, so
+                        they're perfect for your daily
+                        city commute. Our men city bikes are the Caféracer,
+                        Caféchaser, and the Berlin,
+                        but feel free to opt for a women's bike for that easy
+                        hop-on-hop-off Amsterdam style.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content section 5 -->
+        <section class="relative w-full max-w-[1540px] h-[328px] mx-auto">
+            <div
+                class="w-full sm:w-[640px] md:w-[768px] lg:w-[1024px] mx-auto text-[120px] font-[591] flex items-center justify-center mb-10 text-center">
+                City bikes for everyone.
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="bg-gray-700 max-w-[1640px] mt-24 mx-auto">
+            <div
+                class="w-[90%] m-auto flex flex-col md:flex-row justify-between items-center">
+                <div
+                    class="w-full md:w-[60%] text-[16px] text-justify text-white py-7 justify-center md:ml-20">
+                    <p>
+                        Ready to take the Electric Ivy or Ace for a spin?
+                        Electric test rides are now available in Amsterdam,
+                        Amstelveen, Abcoude, Bussum, Den Haag, Nijmegen, Weesp,
+                        Wormerveer, Berlin, Hamburg, and Munich.
+                        Schedule your test ride now, and we'll see you there.
+                    </p>
+                </div>
+
+                <button
+                    class="bg-white text-black w-full sm:w-[200px] h-[40px] sm:h-[50px] rounded-full text-[14px] font-semibold shadow-md hover:bg-gray-200 transition text-center mt-4 md:mt-0 mr-10">
+                    BOOK NOW
+                </button>
+            </div>
+        </div>
+        <footer
+            class="bg-gray-900 max-w-[1640px] mx-auto text-white relative bottom-0">
+            <div class="mx-auto px-4 pb-6 pt-16 sm:px-6 lg:px-8">
+                <div
+                    class="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5">
+                    <div class="ml-10">
+                        <h2 class="text-2xl font-bold">Explorer</h2>
+                        <ul class="mt-4 space-y-2 text-gray-400">
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Electric
+                                    bikes</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">City
+                                    bikes</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Kids'
+                                    bikes</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Accessories</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Outlet</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Business</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Insurance
+                                    Electric</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Size
+                                    guide</a></li>
+                        </ul>
+                    </div>
+                    <div class="ml-10">
+                        <h2 class="text-2xl font-bold">About</h2>
+                        <ul class="mt-4 space-y-2 text-gray-400">
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">About
+                                    us</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Journal</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Reviews</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Press</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Jobs</a></li>
+                        </ul>
+                    </div>
+                    <div class="mr-10">
+                        <h2 class="text-2xl font-bold">Help</h2>
+                        <ul class="mt-4 space-y-2 text-gray-400">
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Contact</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">FAQ</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Delivery</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Assembly
+                                    & manuals</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Payment
+                                    options</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Privacy
+                                    policy</a></li>
+                            <li><a href="#"
+                                    class="hover:text-gray-300 transition">Terms
+                                    & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 mr-20 ml-20 relative">
+                        <h2 class="text-white font-bold">Join the ride.</h2>
+                        <p class="text-gray-400 font-bold">Sign up for our
+                            newsletter.</p>
+                        <form class="mt-4">
+                            <label for="email" class="sr-only">Email</label>
+                            <div
+                                class="flex items-center rounded-[20px] overflow-hidden border border-gray-600 bg-gray-800">
+                                <input type="email" id="email"
+                                    placeholder="Enter your email address here"
+                                    class="w-full bg-gray-800 px-4 py-2 text-white focus:outline-none focus:ring-0" />
+                                <button type="submit"
+                                    class="bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-500 transition rounded-[20px]">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <div class="mt-2 flex items-center">
+                                <input type="checkbox" id="agree"
+                                    class="mr-2 w-5 h-5 border-2 border-gray-500 rounded focus:ring-2 focus:ring-blue-500 checked:bg-black">
+                                <label for="agree"
+                                    class="text-gray-400 text-sm">
+                                    By signing up, I agree to the privacy policy
+                                    of Veloretti.
+                                </label>
+                            </div>
+                        </form>
+                        <div class="mt-4 flex items-center p-4">
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300 mr-4">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300 mr-4">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300 mr-4">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300 mr-4">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="text-white hover:text-gray-300">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute top-4 right-4 z-10 mr-5">
+                <button
+                    class="bg-white rounded-full w-12 h-12 text-black text-center shadow-lg hover:bg-blue-500 transition">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+        </footer>
+
+    </body>
 </html>
